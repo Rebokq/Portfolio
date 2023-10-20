@@ -2,8 +2,10 @@
     <div class="flex h-screen">
 
         <div>
-            <div class=dot></div>
-            <slot />
+<!--             <div class="dot z-1"> </div>
+ -->            <div class="z-10">
+                <slot />
+            </div>
         </div>
 
     </div>
@@ -51,15 +53,23 @@ export default {
     background-color: #F6DCBB;
     margin: 0;
     padding: 0;
-}
+/*     cursor: none;
+ */}
+
 .dot {
-  visibility: hidden;
-  position: absolute;
-  width: 0.1px;
-  height: 0.1px;
-  border-radius: 100%;
-  background-color: whitesmoke;
-  box-shadow: 0 0 80px 80px rgba(255, 255, 255, 0.6); /* Effet de flou circulaire */
-  overflow: hidden;
+    visibility: hidden;
+    position: absolute;
+    /*   width:18%;
+  height: 18%; */
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 90px 90px rgba(255, 255, 255, 0.6);
+    /* Effet de flou circulaire */
+    overflow: hidden;
+    filter: blur(20px);
+    /* Ajoutez cette ligne pour appliquer un flou de 10 pixels */
+
 }
 </style>

@@ -3,9 +3,9 @@
     <div class="h-screen w-screen">
         <div class="flex">
             <header>
-              <!-- <Navbar/> -->
-              <div class="w-screen p-2" >
-                    <div class="flex justify-between place-items-center items-center py-2">
+                <!-- <DarkNav/> -->
+                <div class="w-screen p-2">
+                    <div class="flex justify-between place-items-center items-center py-2 text-white">
                         <div>
                             <div class="">
                                 <ul class="flex flex-row space-x-32 pl-32 text-xl font-light"> 
@@ -34,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+
             </header>
         </div>
         <div>
@@ -47,60 +48,12 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      noScroll: false,
-    };
-  },
-  watch: {
-    noScroll(value) {
-      this.$store.commit('setNoScroll', value);
-    },
-  },
-};
-/* export default {
-    mounted() {
-        const dot = document.querySelector(".dot");
-        let mouseX = 0;
-        let mouseY = 0;
-        let dotX = 0;
-        let dotY = 0;
-        const inertia = 0.1; // Réglage du retard, plus la valeur est basse, plus le retard est grand
-
-        window.addEventListener("mousemove", (e) => {
-            dot.style.visibility = "visible";
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateDot() {
-            const dx = mouseX - dotX;
-            const dy = mouseY - dotY;
-
-            dotX += dx * inertia;
-            dotY += dy * inertia;
-
-            dot.style.top = `${dotY}px`;
-            dot.style.left = `${dotX}px`;
-
-            requestAnimationFrame(animateDot);
-        }
-
-        animateDot();
-
-
-    }
-
-} */
 </script>
 
 <style lang="css" scoped>
 * {
-    background-color: #F6DCBB;
+    background-color: #000000;
     margin: 0;
-
-    
     /*     cursor: none;
  */
 }
@@ -109,34 +62,32 @@ export default {
     height: 100%;
     overflow: hidden;
 }
-body.no-scroll {
-  overflow: hidden;
-}
 .boutton-contact {
     border-color: rgb(251, 237, 221);
     transition: border-radius 1s ease-out, background-color 1s ease-out;
-
+color: #F6DCBB;
 
 }
 
 .boutton-contact:hover {
     background-color: rgb(251, 237, 221);
     border-radius: 50%;
-    transition: border-radius 0.5s ease-out, background-color 0.5s ease-out;
+    transition: border-radius 0.5s ease-out, background-color 0.5s ease-out, color 0.5s ease-out;
+    color: #000000;
 
 }
 a{
-    color: #000000;
+    color: #F6DCBB;
 
 }
 li{
-    color: #000000;
+    color: #F6DCBB;
 }
 
 li:after {
   display:block;
   content: '';
-  border-bottom: solid 2px #000;  
+  border-bottom: solid 2px #F6DCBB;  
   transform: scaleX(0);  
   transition: transform 350ms ease-in-out;
   transform-origin: 100% 50%; 

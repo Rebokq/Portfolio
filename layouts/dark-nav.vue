@@ -8,7 +8,7 @@
                     <div class="flex justify-between place-items-center items-center py-2 text-white">
                         <div>
                             <div class="">
-                                <ul class="flex flex-row space-x-32 pl-32 text-xl font-light"> 
+                                <ul class="flex flex-row space-x-64 pl-32 text-xl font-light"> 
                                     <li><NuxtLink to="/project">Projects</NuxtLink></li>
                                     <li><NuxtLink to="/experience">Experiences</NuxtLink></li>
                                 </ul>
@@ -26,7 +26,7 @@
                                     <li><NuxtLink to="/about">About me</NuxtLink></li>
                                     
                                     <NuxtLink class="" to="/contact">
-                                        <button class="boutton-contact p-2 px-8 rounded-super border-2 border-red-500 ">Contact me</button>
+                                        <button class="boutton-contact p-2 px-4 rounded-super border-2 ">Contact me</button>
                                     </NuxtLink>
                                     
                                 </ul>

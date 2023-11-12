@@ -6,7 +6,7 @@
             <div class="flex items-center h-screen">
                 <div class="flex flex-col">
 
-                    <div class="mt-4 ml-4 mb-16">
+                    <div class="mt-4 ml-4 mb-16 description">
                         <p class="text-3xl mb-4 font-light	">Hi, I'm <br /> </p>
                         <p class="text-4xl mb-6"><strong>Louis Kabore</strong><br /> </p>
                         <p class="text-3xl mb-4 font-normal pl-24">Front-end Developer <br /></p>
@@ -147,4 +147,7 @@ export default {
     bottom: -20px; /* Ajustez cette valeur en fonction de votre besoin */
 }
 
+.description{
+    letter-spacing: 0.07em;
+}
 </style>

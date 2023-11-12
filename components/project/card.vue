@@ -2,11 +2,15 @@
     <div>
         <div class="flex justify-around mr-8 ml-8">  
 
-            <div class="project-container" @click="openNav">
+            <div class="project-container" 
+                 v-for="project in projects"
+                 :key="project.id" 
+                 @click="openNav(project)">
+
                 <div class="card">
                     <h1 class="text-white"></h1>
                 </div>
-                <h2 class="mb-4">Project Name</h2>
+                <h2 class="mb-4">{{ project.name}}</h2>
                 <div class="flex items-center hover:mb-4">
                     <NuxtLink class="flex items-center" to="/">
                         <nuxt-img
@@ -20,59 +24,6 @@
                 </div>
             </div>
 
-            <div class="project-container">
-                <div class="card">
-                    <h1 class="text-white"></h1>
-                </div>
-                <h2 class="mb-4">Project Name</h2>
-                <div class="flex items-center">
-                    <NuxtLink class="flex items-center" to="/">
-                        <nuxt-img
-                            src="../public/assets/arrow.png"
-                            alt=""
-                            class=" mr-2 w-8"
-                            quality="30"
-                        />
-                        <a class="">Read More</a>
-                    </NuxtLink>
-                </div>
-            </div>
-
-            <div class="project-container">
-                <div class="card">
-                    <h1 class="text-white"></h1>
-                </div>
-                <h2 class="mb-4">Project Name</h2>
-                <div class="flex items-center">
-                    <NuxtLink class="flex items-center" to="/">
-                        <nuxt-img
-                            src="../public/assets/arrow.png"
-                            alt=""
-                            class=" mr-2 w-8"
-                            quality="30"
-                        />
-                        <a class="">Read More</a>
-                    </NuxtLink>
-                </div>
-            </div>
-
-            <div class="project-container">
-                <div class="card">
-                    <h1 class="text-white"></h1>
-                </div>
-                <h2 class="mb-4">Project Name</h2>
-                <div class="flex items-center">
-                    <NuxtLink class="flex items-center" to="/">
-                        <nuxt-img
-                            src="../public/assets/arrow.png"
-                            alt=""
-                            class=" mr-2 w-8"
-                            quality="30"
-                        />
-                        <a class="">Read More</a>
-                    </NuxtLink>
-                </div>
-            </div>
         </div>
 
         
@@ -80,17 +31,25 @@
     
 </template>
 <script>
-export default {
-    methods: {
-    openNav() {
-      event.stopPropagation();
+import projects from '../../store/projects.json';
 
+export default {
+    props: ['openNav'],
+    data() {
+    return {
+      projects: projects
+    };
+  },
+  methods: {
+    openNav(project) {
+      event.stopPropagation();
+      this.$emit('projectSelected', project);
 
       document.getElementById("mySidenav").style.height = "75%";
     },
 
+}
 
-  },
 
 }
 

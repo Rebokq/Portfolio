@@ -15,7 +15,7 @@
                           @click="closeNav"
                         />
                       
-                      <h2>Project Name</h2>
+                      <h2>{{ selectedProject.name }}</h2>
                     </div>
 
                     <div class="flex">
@@ -46,7 +46,8 @@
               </div>
             </div>
 
-            <Card />
+            <Card @projectSelected="showProjectDetails" />
+
 
         </div>
     </div>
@@ -60,13 +61,18 @@ definePageMeta({
 <script>
 import Card from "../components/project/card.vue"
 import BottomNav from "../components/project/bottom.vue"
+import projects from '../store/projects.json';
 
 export default {
   components: {
     Card,
     BottomNav,
   },
-
+  data() {
+    return {
+      selectedProject: {} // Détails du projet sélectionné
+    };
+  },
 
   methods: {
    
@@ -78,7 +84,11 @@ export default {
       if (!document.getElementById("mySidenav").contains(event.target)) {
       document.getElementById("mySidenav").style.height = "0";
       }      
-    }
+    },
+    showProjectDetails(project) {
+      this.selectedProject = project;
+      document.getElementById("mySidenav").style.height = "75%";
+    },
 
   },
 

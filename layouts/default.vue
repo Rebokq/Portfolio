@@ -8,7 +8,7 @@
                     <div class="flex justify-between place-items-center items-center py-2">
                         <div>
                             <div class="">
-                                <ul class="flex flex-row space-x-32 pl-32 text-xl font-light"> 
+                                <ul class="flex flex-row space-x-64 pl-32 text-xl font-light"> 
                                     <li><NuxtLink to="/project">Projects</NuxtLink></li>
                                     <li><NuxtLink to="/experience">Experiences</NuxtLink></li>
                                 </ul>

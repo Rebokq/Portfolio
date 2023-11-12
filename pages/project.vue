@@ -11,7 +11,7 @@
                         <nuxt-img
                           src="../public/assets/close-button.svg"
                           alt=""
-                          class="flex float-right w-16 pointer"
+                          class="flex float-right w-16 cursor-pointer"
                           @click="closeNav"
                         />
                       
@@ -45,9 +45,9 @@
                 </div>
               </div>
             </div>
-
-            <Card @projectSelected="showProjectDetails" />
-
+             
+            <Card class="" @projectSelected="showProjectDetails" />
+           
 
         </div>
     </div>
@@ -95,6 +95,15 @@ export default {
   mounted() {
     // Ajoute un écouteur d'événements au chargement du composant
     document.body.addEventListener("click", this.closeNavOnBodyClick);
+
+
+    // TRANSITION //
+    // Délai pour l'apparition du titre
+    setTimeout(() => {
+      document.querySelector('.title').style.opacity = 1;
+    }, 500); // Un délai de 500ms (ajustez selon vos besoins)
+
+   
   },
   beforeUnmount() {
     // Assurez-vous de retirer l'écouteur d'événements lorsque le composant est déchargé
@@ -103,6 +112,12 @@ export default {
 };
 </script>
 <style lang="css">
+
+.title {
+  opacity: 0; /* Le titre est initialement invisible */
+  transition: opacity 1s ease; /* Une transition en fondu */
+}
+
 .cercle{
   background-color: #FBEDDD;
   padding: 50px;

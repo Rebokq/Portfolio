@@ -1,12 +1,9 @@
 <template lang="">
-    
-    <div class="experience">
-        <div class="scrollable-container">
+    <div>
+        <h1 class="ml-32 mt-8 text-black">Experience</h1>
+        <div>
 
             <div class="racesWrapper">
-                
-                <h1 class="ml-32 text-black">Experience</h1>
-
                 <h2 class="year text-black">2020</h2>
                 <div class="races">
                     <div class="year-card" data-year="2017"></div>
@@ -32,7 +29,6 @@ export default {
 
         const races = document.querySelector(".races");
         const h2 = document.querySelector(".year");
-        const homeRef = this.$refs.homeRef;
 
         function getScrollAmount() {
             let racesWidth = races.scrollWidth;
@@ -47,8 +43,8 @@ export default {
 
         ScrollTrigger.create({
             trigger: ".racesWrapper",
-            start: "top top",
-            end: () => `+=${getScrollAmount() * -1 }`,
+            start: "top 0%",
+            end: () => `+=${getScrollAmount() * -1}`,
             pin: true,
             animation: tween,
             scrub: 1,
@@ -69,7 +65,6 @@ export default {
                     }
                 });
             },
-            
         });
         }
     },
@@ -77,15 +72,16 @@ export default {
         gsap.registerPlugin(ScrollTrigger);
         this.ScrollAnimation();
 
-
-    },
-    
+    }
 }
+
+definePageMeta({
+  layout: "none"
+}) 
 
 </script>
 <style lang="css">
-
-h2 {
+h1 {
     color: rgb(0, 0, 0);
     font-size: 64px;
     font-style: normal;
@@ -93,14 +89,14 @@ h2 {
     line-height: normal;
 }
 
-.experience{
-    margin-top: 50px;
-
+body {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-
 .racesWrapper {
-    position: flex;
+    position: relative;
     height: 100vh;
 }
 
@@ -116,10 +112,11 @@ h2 {
     display: flex;
     flex-wrap: nowrap;
     margin: 0 auto;
-    overflow: auto;
     /* Centrer horizontalement */
 }
-
+.year-card {
+    color: black;
+}
 
 .year-card:first-child {
     margin-left: 50vw;

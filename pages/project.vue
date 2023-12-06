@@ -8,14 +8,23 @@
                   <div class="side-content">
                     <div  class="mb-8">
                       
-                        <nuxt-img
-                          src="../public/assets/close-button.svg"
-                          alt=""
-                          class="flex float-right w-16 cursor-pointer"
-                          @click="closeNav"
-                        />
+                      <nuxt-img
+                        src="../public/assets/close-button.svg"
+                        alt=""
+                        class="flex float-right w-16 cursor-pointer"
+                        @click="closeNav"
+                      />
                       
-                      <h2>{{ selectedProject.name }}</h2>
+                      <div class="flex space-x-8 align-items">
+                        <h2>{{ selectedProject.name }}</h2>
+                        <nuxt-img
+                            src="../public/assets/github.svg"
+                            alt=""
+                            class="flex float-right w-12 cursor-pointer"
+                          
+                          />
+                      </div>
+
                     </div>
 
                     <div class="flex">
@@ -75,15 +84,15 @@ export default {
   },
 
   methods: {
-   
-    closeNav(){
+
+    closeNav() {
       document.getElementById("mySidenav").style.height = "0";
 
     },
     closeNavOnBodyClick() {
       if (!document.getElementById("mySidenav").contains(event.target)) {
-      document.getElementById("mySidenav").style.height = "0";
-      }      
+        document.getElementById("mySidenav").style.height = "0";
+      }
     },
     showProjectDetails(project) {
       this.selectedProject = project;
@@ -103,7 +112,7 @@ export default {
       document.querySelector('.title').style.opacity = 1;
     }, 500); // Un délai de 500ms (ajustez selon vos besoins)
 
-   
+
   },
   beforeUnmount() {
     // Assurez-vous de retirer l'écouteur d'événements lorsque le composant est déchargé
@@ -114,47 +123,54 @@ export default {
 <style lang="css">
 
 .title {
-  opacity: 0; /* Le titre est initialement invisible */
-  transition: opacity 1s ease; /* Une transition en fondu */
+  opacity: 0;
+  /* Le titre est initialement invisible */
+  transition: opacity 1s ease;
+  /* Une transition en fondu */
 }
 
-.cercle{
+.cercle {
   background-color: #FBEDDD;
   padding: 50px;
   width: 50px;
   border-radius: 50%;
 }
-.line{
+
+.line {
   height: 500px;
 }
 
 .project-detail p {
   color: #000;
-text-align: center;
-font-family: Inter;
-font-size: 32px;
-font-style: normal;
-font-weight: 200;
-line-height: normal;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
 }
-.project-img{
-width: 400px;
-height: 500px;
-background-color: #FBEDDD;
-border-radius: 25px;
-padding: 150px;
-margin: 0;
+
+.project-img {
+  width: 400px;
+  height: 500px;
+  background-color: #FBEDDD;
+  border-radius: 25px;
+  padding: 150px;
+  margin: 0;
 }
-.side-content{
+
+.side-content {
   padding: 32px;
 
 }
-.side-content h2{
+
+.side-content h2 {
   color: black;
   font-size: 64px;
 
 
 }
+
 .sidenav {
   height: 0%;
   width: 100%;
@@ -192,5 +208,4 @@ margin: 0;
 .bottomNav-leave-active {
   transform: translateY(100%);
   transition: transform 1s ease-out;
-}
-</style>
+}</style>

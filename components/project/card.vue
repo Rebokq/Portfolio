@@ -51,11 +51,11 @@ export default {
     },
     mounted() {
         const cards = document.querySelectorAll('.project-container');
-  cards.forEach((card, index) => {
-    setTimeout(() => {
-      card.classList.add('project-appeared'); // Ajoutez la classe pour activer l'effet d'apparition
-    }, 800 * (index + 1)); // Délai pour chaque carte
-  });
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+            card.classList.add('project-appeared'); // Ajoutez la classe pour activer l'effet d'apparition
+            }, 1000 * (index + 1)); // Délai pour chaque carte
+        });
     }
 
 
@@ -92,7 +92,7 @@ a {
     opacity: 0;
     transform: translateY(500px);
     /* Ajustez cette valeur pour votre mise en page */
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 2s ease, transform 1s ease;
 
 }
 

@@ -1,33 +1,39 @@
 <template lang="">
     <div class="w-screen p-4" >
-        <div class="flex justify-between place-items-center items-center py-2">
-            <div>
-                <div class="">
-                    <ul class="flex flex-row space-x-64 pl-32 text-xl font-light"> 
-                        <li><NuxtLink to="/project">Projects</NuxtLink></li>
-                        <li><NuxtLink to="/experience">Experiences</NuxtLink></li>
-                    </ul>
-                </div>
 
+        <div class="navbar-wrapper flex justify-between place-items-center items-center py-2">
+
+            <div class="flex justify-between place-items-center items-center py-2">
+                <div>
+                    <div class="">
+                        <ul class="flex flex-row space-x-64 pl-32 text-xl font-light"> 
+                            <li><NuxtLink to="/project">Projects</NuxtLink></li>
+                            <li><NuxtLink to="/experience">Experiences</NuxtLink></li>
+                        </ul>
+                    </div>
+
+                
+                </div>
+                <div>
+                    <NuxtLink to="/"><a class="text-5xl">LK</a></NuxtLink>
+                </div>
             
-            </div>
-            <div>
-                <NuxtLink to="/"><a class="text-5xl">LK</a></NuxtLink>
-            </div>
-          
-            <div> 
-                <div class="">
-                    <ul class="flex flex-row space-x-64 pr-32 text-xl place-items-center font-light"> 
-                        <li><NuxtLink to="/about">About me</NuxtLink></li>
-                        
-                        <NuxtLink class="" to="/contact">
-                            <button class="boutton-contact p-2 px-8 rounded-super border-2 border-red-500 ">Contact me</button>
-                        </NuxtLink>
-                        
-                    </ul>
+                <div> 
+                    <div class="">
+                        <ul class="flex flex-row space-x-64 pr-32 text-xl place-items-center font-light"> 
+                            <li><NuxtLink to="/about">About me</NuxtLink></li>
+                            
+                            <NuxtLink class="" to="/contact">
+                                <button class="boutton-contact p-2 px-8 rounded-super border-2 border-red-500 ">Contact me</button>
+                            </NuxtLink>
+                            
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
         </div>
+
     </div>
 </template>
 <script>
@@ -76,4 +82,11 @@ li:after{  transform-origin:  0% 50%; }
 
 li:not(:hover):after { transform-origin:  100% 50%; }
 
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
 </style>

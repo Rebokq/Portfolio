@@ -1,11 +1,11 @@
 <template>
-    <div class="home" ref="homeRef">
+    <div class="home" >
         <div class="h-screen w-screen ">
             <div class="flex pb-8">
-                <header class="navbar w-full">
+                <header class="navbar w-full" >
                     <!-- <Navbar/> -->
-                    <div class="w-screen p-2 ">
-                        <div class="flex justify-between place-items-center items-center py-2">
+                    <div class="w-screen p-2 " >
+                        <div class="flex justify-between place-items-center items-center py-2" id="nav" ref="homeRef">
                             <div>
                                 <div class="">
                                     <ul class="flex flex-row space-x-64 pl-32 text-xl font-light">
@@ -43,6 +43,7 @@
                         </div>
                     </div>
                 </header>
+               <div class="fixed-element"></div>
             </div>
             <div class=" pages ">
                 <slot />
@@ -121,7 +122,7 @@ export default {
     margin-bottom: auto;
     z-index: 1000;
 }
-
+.
 .boutton-contact {
     border-color: rgb(251, 237, 221);
     transition: border-radius 1s ease-out, background-color 1s ease-out;

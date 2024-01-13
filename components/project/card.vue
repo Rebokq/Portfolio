@@ -11,7 +11,7 @@
                     <h1 class="text-white"></h1>
                 </div>
                 <h2 class="mb-4">{{ project.name}}</h2>
-                <div class="flex items-center hover:mb-4">
+                <div class="flex items-center">
                     <NuxtLink class="flex items-center" to="/">
                         <nuxt-img
                             src="../public/assets/arrow.png"

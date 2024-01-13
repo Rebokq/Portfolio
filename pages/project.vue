@@ -140,6 +140,10 @@ export default {
   height: 500px;
 }
 
+h2{
+  color: #FBEDDD;
+}
+
 .project-detail p {
   color: #000;
   text-align: center;

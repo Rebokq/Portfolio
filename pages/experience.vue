@@ -13,11 +13,18 @@
                     <div class="year-card flex " 
                         v-for="experience in experience"
                         :key="experience.id"  
-                        data-year="2017">
+                        :data-year="experience.year">
 
                         <div class="flex flex-row">
 
-                            <div class=" flex image w-72 h-full "> </div>
+                            <div class=" flex image w-72 h-full z-100">
+                                <nuxt-img 
+                                    :src="experience.img"
+                                    alt=""
+                                    class="z-1 float-left margin-fleche p-4 w-14 object-contain w-full"
+                                    quality="30"
+                                />
+                            </div>
 
                             <div class="detail flex flex-col">
                                 <div>
@@ -58,7 +65,10 @@ export default {
     },
     data() {
         return {
-            experience: experience
+            experience: experience,
+            images: {
+                job: "../public/assets/Post_University.svg.png",
+            }
         };
     },
     methods: {
@@ -192,19 +202,8 @@ export default {
     height: 100vh;
 }
 
-/* .year-card {
-    background-color: red;
-    width: 800px;
-    height: 500px;
-    border-radius: 25px;
-
-    flex: 0 0 auto;
-    margin-right: 15px;
-} */
-
-
 .year-card{
-    background-color: white;
+    background-color: #FBEDDD;
     width: 700px;
     height: 480px;
     border-radius: 25px;
@@ -214,7 +213,7 @@ export default {
     
 }
 .image{
-    background-color: black;
+    background-color: #F6DCBB;
     border-radius: 25px;
     height: 100%; 
 

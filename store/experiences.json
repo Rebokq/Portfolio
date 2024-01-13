@@ -1,42 +1,47 @@
 [
     {
+      "id": 0,
+      "year": "2014",
+      "month": "SEPT",
+      "job": "Lycée Sacré Coeur",
+      "city": "Saint Brieuc (Bretagne)",
+      "time": "2014 - 2017",
+      "img": "../public/assets/sc.png"
+    },
+    {
       "id": 1,
       "year": "2017",
-      "month": "AUG",
+      "month": "SEPT",
       "job": "Post University",
-      "city": "Description for Project 1...",
-      "time": ""
+      "city": "Waterbury (CT, USA)",
+      "time": "2017 - 2021",
+      "img": "../public/assets/Post_University.svg.png"
     },
     {
         "id": 2,
-        "year": "2018",
+        "year": "2021",
         "month": "AUG",
         "job": "Epitech",
-        "city": "Description for Project 1...",
-        "time": ""
+        "city": "Paris",
+        "time": "2021 - Current",
+        "img": "../public/assets/epitech.png"
       },  
       {
         "id": 3,
-        "year": "2019",
-        "month": "AUG",
+        "year": "2022",
+        "month": "Jan",
         "job": "Voysen",
-        "city": "Description for Project 1...",
-        "time": ""
+        "city": "Paris",
+        "time": "2022 - 2022",
+        "img": "../public/assets/voysen.png"
       },
       {
         "id": 4,
         "year": "2022",
-        "month": "AUG",
+        "month": "SEPT",
         "job": "Gret",
-        "city": "Description for Project 1...",
-        "time": ""
-      },
-      {
-        "id": 5,
-        "year": "2023",
-        "month": "AUG",
-        "job": "Project 1",
-        "city": "Description for Project 1...",
-        "time": ""
+        "city": "Paris",
+        "time": "2022 - Current",
+        "img": "../public/assets/gret.png"
       }
   ]

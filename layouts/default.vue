@@ -122,7 +122,7 @@ export default {
     margin-bottom: auto;
     z-index: 1000;
 }
-.
+
 .boutton-contact {
     border-color: rgb(251, 237, 221);
     transition: border-radius 1s ease-out, background-color 1s ease-out;

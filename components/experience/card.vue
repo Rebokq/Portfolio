@@ -35,6 +35,10 @@ export default {
             experience: experience
         };
     },
+    props: ['experience'],
+  mounted() {
+    console.log('Experience in Card component:', this.experience);
+  },
 }
 </script>
 <style lang="css">
